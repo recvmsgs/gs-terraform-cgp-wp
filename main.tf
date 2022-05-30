@@ -10,12 +10,12 @@ provider "google-beta" {
 
 resource "google_compute_network" "this" {
   auto_create_subnetworks = false
-  name                    = "example-10"
+  name                    = "example-12"
   routing_mode            = "REGIONAL"
 }
 
 resource "google_compute_subnetwork" "this" {
-  name          = "example-10"
+  name          = "example-12"
   ip_cidr_range = "192.168.24.0/24"
   region        = "us-west1"
   network       = google_compute_network.this.id
@@ -40,7 +40,7 @@ resource "google_service_networking_connection" "this" {
 }
 
 resource "google_compute_address" "this" {
-  name   = "example-10"
+  name   = "example-12"
   region = "us-west1"
 }
 
@@ -74,7 +74,7 @@ resource "google_compute_firewall" "wordpress_ingress_ssh" {
 
 resource "google_sql_database_instance" "this" {
   database_version = "MYSQL_5_6"
-  name             = "example-wordpress-10"
+  name             = "example-wordpress-12"
   region           = "us-west1"
 
   depends_on = [
