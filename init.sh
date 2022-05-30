@@ -47,3 +47,4 @@ sudo -u www-data sed -i 's/password_here/${DB_PASSWORD}/' /srv/www/wordpress/wp-
 sudo -u www-data sed -i 's/localhost/${DB_HOST}/' /srv/www/wordpress/wp-config.php
 
 systemctl restart apache2
+
