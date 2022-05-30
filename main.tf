@@ -205,3 +205,4 @@ resource "google_compute_disk_resource_policy_attachment" "this" {
  zone        = "us-west1-a"
  depends_on = [google_compute_instance.this]
 }
+
